@@ -1,0 +1,264 @@
+{
+  "openapi": "3.1.0",
+  "info": {
+    "title": "Mai Model Actions",
+    "version": "1.0.0",
+    "description": "API schema for actions Mai can perform based on user prompts."
+  },
+  "servers": [
+    {
+      "url": "https://api.example.com"
+    }
+  ],
+  "paths": {
+    "/generateMarketAnalysis": {
+      "post": {
+        "operationId": "generateMarketAnalysis",
+        "summary": "Generates a market analysis",
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "sector": {
+                    "type": "string",
+                    "example": "mobile technology"
+                  },
+                  "region": {
+                    "type": "string",
+                    "example": "Europe"
+                  },
+                  "timeFrame": {
+                    "type": "string",
+                    "example": "next five years"
+                  }
+                },
+                "required": ["sector", "region", "timeFrame"]
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Market analysis generated successfully",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "analysis": {
+                      "type": "string",
+                      "example": "The market for mobile technology in Europe is expected to grow by..."
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/createMarketingPlan": {
+      "post": {
+        "operationId": "createMarketingPlan",
+        "summary": "Creates a marketing plan",
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "product": {
+                    "type": "string",
+                    "example": "new mobile app"
+                  },
+                  "goals": {
+                    "type": "string",
+                    "example": "increase user base by 20%"
+                  },
+                  "targetAudience": {
+                    "type": "string",
+                    "example": "tech-savvy millennials"
+                  },
+                  "budget": {
+                    "type": "number",
+                    "example": 50000
+                  }
+                },
+                "required": ["product", "goals", "targetAudience", "budget"]
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Marketing plan created successfully",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "plan": {
+                      "type": "string",
+                      "example": "To achieve the goal of increasing the user base by 20%, the marketing plan includes..."
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/generateResearchReport": {
+      "post": {
+        "operationId": "generateResearchReport",
+        "summary": "Generates a research report",
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "topic": {
+                    "type": "string",
+                    "example": "user preferences in fitness apps"
+                  },
+                  "keyFindings": {
+                    "type": "string",
+                    "example": "users prefer features such as ..."
+                  },
+                  "recommendations": {
+                    "type": "string",
+                    "example": "add personalized workout plans"
+                  }
+                },
+                "required": ["topic", "keyFindings", "recommendations"]
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Research report generated successfully",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "report": {
+                      "type": "string",
+                      "example": "The research report on user preferences in fitness apps indicates that..."
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/provideTechnicalInstructions": {
+      "post": {
+        "operationId": "provideTechnicalInstructions",
+        "summary": "Provides technical instructions",
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "technology": {
+                    "type": "string",
+                    "example": "Apache server on Ubuntu"
+                  },
+                  "steps": {
+                    "type": "string",
+                    "example": "installation, configuration, optimization"
+                  }
+                },
+                "required": ["technology", "steps"]
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Technical instructions provided successfully",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "instructions": {
+                      "type": "string",
+                      "example": "To set up an Apache server on Ubuntu, follow these steps..."
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/createStrategicActionPlan": {
+      "post": {
+        "operationId": "createStrategicActionPlan",
+        "summary": "Creates a strategic action plan",
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "project": {
+                    "type": "string",
+                    "example": "VR game development startup"
+                  },
+                  "swotAnalysis": {
+                    "type": "string",
+                    "example": "strengths, weaknesses, opportunities, threats"
+                  },
+                  "shortTermGoals": {
+                    "type": "string",
+                    "example": "launch MVP within 6 months"
+                  },
+                  "longTermGoals": {
+                    "type": "string",
+                    "example": "capture 10% market share in 2 years"
+                  }
+                },
+                "required": ["project", "swotAnalysis", "shortTermGoals", "longTermGoals"]
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Strategic action plan created successfully",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "actionPlan": {
+                      "type": "string",
+                      "example": "The strategic action plan for the VR game development startup includes..."
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
